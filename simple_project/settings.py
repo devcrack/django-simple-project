@@ -126,3 +126,4 @@ STATICFILES_DIRS = [
 STATIC_ROOT = Path(__file__).parent.parent.joinpath(BASE_DIR, "static")
 
 django_heroku.settings(locals())
+

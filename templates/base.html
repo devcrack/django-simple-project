@@ -5,17 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <!-- Common JavaScript -->
+    <script src="{% static "jquery-3.2.1.min.js" %}"></script>
     <script src="{% static "boostrap/js/popper.min.js" %}"></script>
     <script src="{% static "boostrap/js/bootstrap.min.js" %}"></script>
+
+    {% block custom_javascript %}
+    {% endblock custom_javascript %}
     <!-- Common CSS-->
     <link rel="stylesheet" href="{% static "boostrap/css/bootstrap.min.css" %}"/>
 
     <title>{{ PAGE_TITLE }}</title>
 </head>
-<body class="h-100">
+<body>
 <div class="row h-100 mh-100">
-    {% include "messages.html" %}
     <div class="col">
+        {% include "messages.html" %}
         <div class="row flex-grow d-flex h-90">
             <div class="col main-content" id="main-content">
                 {% block content %}

@@ -20,4 +20,5 @@ from simple_app.views import FirstPageView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', FirstPageView.as_view(), name="first_page"),
+
 ]

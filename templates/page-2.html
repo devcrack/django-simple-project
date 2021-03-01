@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div id="simple" class="col-6 mx-auto justify-content-center align-self-center">
+        <div class="login-form-container text-center  mx-auto">
+            <h3>Here's your submitted data</h3>
+            <br>
+            <div class="card" style="justify-content: center">
+                {% for text in data %}
+                    <li class="list-group-item ">
+                        {{ text }}
+                    </li>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

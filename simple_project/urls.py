@@ -20,5 +20,5 @@ from simple_app.views import FirstPageView, SecondPage
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', FirstPageView.as_view(), name="first_page"),
-    path('paget-two/', SecondPage.as_view(), name="second_page")
+    path('paget-two/<str:name>/<str:address>/<str:phone>/', SecondPage.as_view(), name="second_page")
 ]

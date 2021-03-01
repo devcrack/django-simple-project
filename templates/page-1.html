@@ -3,8 +3,8 @@
 
 {% block custom_javascript %}
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="{% static "custom/simple_js.js" %}"></script>
+    {#    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>#}
+    {#    <script src="{% static "custom/simple_js.js" %}"></script>#}
 {% endblock custom_javascript %}
 
 {% block content %}
@@ -15,8 +15,7 @@
                 <div class="row pt-4">
                     <div class="col w-100 mx-auto text-center">
                         <input type="text" name="names" required placeholder="Name's"
-                               id="id_name" class="form-control"
-                               v-model="names"/>
+                               id="id_name" class="form-control"/>
                     </div>
                 </div>
                 <div class="row pt-4">
@@ -27,21 +26,17 @@
                 </div>
                 <div class="row pt-4">
                     <div class="col w-100 mx-auto text-center">
-                        <input type="text" name="address" required placeholder="Phone"
+                        <input type="text" name="phone" pattern="[0-9]+" required
+                               placeholder='Phone "ONLY NUMBERS PLAEASE"'
                                id="id_phone" class="form-control"/>
                     </div>
                 </div>
                 <div class="row pt-4">
                     <div class="col">
-                        <button type="button"
-                                class="btn btn-success align-middle"
-                                v-on:click="save">
+                        <button type="submit" class="btn btn-success align-middle">
+                            {#                                v-on:click="save">#}
                             Submit
                         </button>
-                        {#                        <input type="submit" class="btn"#}
-                        {#                               value="Enviar"#}
-                        {#                               data-form="loginform"/>#}
-                        {#                        <br/>#}
                     </div>
                 </div>
             </form>

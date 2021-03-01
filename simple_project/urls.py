@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from simple_app.views import FirstPageView
+from simple_app.views import FirstPageView, SecondPage
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', FirstPageView.as_view(), name="first_page"),
-
+    path('paget-two/', SecondPage.as_view(), name="second_page")
 ]
